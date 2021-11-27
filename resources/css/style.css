@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+:root {
+	--blue: #031b4e;
+	--white: #ffffff;
+	--black: #000000;
+	font-size: 16px;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+	font-family: 'Inter', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+	/*font-family: 'Cutive Mono', monospace;*/
+	margin: 0;
+	padding: 0;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.content {
+	width: 96vw;
+	margin: 30px auto;
+	display: grid;
+	grid-gap: 50px;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-gap: 50px;
+}
+
+.header .logo {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 20px;
+}
+.header .logo .image img {
+	width: 60px;
+}
+.header .logo .name {
+	justify-content: space-between;
+	text-align: left;
+}
+.header .logo .name h1 {
+	margin: 0;
+	font-size: 1.9rem;
+}
+.header .logo .name #p-name {
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.header .nav {
+	text-align: right;
+	display: grid;
+	align-items: center;
+}
+.header .nav .links a {
+	margin: 0 20px;
+	text-decoration: none;
+	color: var(--white);
+	font-weight: 300;
+	letter-spacing: .05rem;
+	text-transform: uppercase;
+}
+.header .nav .links a:hover {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.header .social {
+	display: flex;
+	flex-direction: row;
+	grid-gap: 20px;
+	align-items: center;
+}
+
+.header .social a {
+	color: var(--black);
+	text-decoration: none;
+	background-color: var(--white);
+	padding: 10px;
+	line-height: 10px;
+	border-radius: 5px;
+}
+.header .social a span {
+	margin-left: 10px;
+}
