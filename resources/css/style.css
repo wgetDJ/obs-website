@@ -4,7 +4,8 @@
 :root {
 	--black: #000000;
 	--white: #ffffff;
-	--gray: #dddddd;
+	--gray: #adadad;
+	--blue: #1f54d8;
 	--trans-white: #ffffff1f;
 	font-size: 16px;
 }
@@ -200,8 +201,121 @@ body {
 
 .features h1 {
 	margin: 0;
-	font-size: 1.5rem;
-	font-weight: 400;
+	font-size: 1rem;
+	font-weight: 700;
 	letter-spacing: .5rem;
 	text-transform: uppercase;
+}
+
+.features .tabs {
+	margin-top: 50px;
+}
+.features .tabs ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	grid-gap: 30px;
+}
+.features .tabs ul li {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+}
+.features .tabs ul li a {
+	text-decoration: none;
+	color: var(--gray);
+	transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+}
+.features .tabs ul li a:hover {
+	color: var(--black);
+}
+.features .tabs ul .active a {
+	text-decoration: underline;
+	text-underline-offset: 10px;
+	color: var(--black);
+}
+
+.features .tabs .tab {
+	margin-top: 80px;
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-gap: 100px;
+}
+
+.features .tabs .tab .tab-image,
+.features .tabs .tab .tab-details {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.features .tabs .tab .tab-details {
+	font-size: 2rem;
+	letter-spacing: .05rem;
+	line-height: 3rem;
+}
+
+
+/*Sponsors*/
+.sponsors {
+	width: 85%;
+	margin: 100px auto;
+}
+.sponsors h1 {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: .5rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+.sponsors .sponsors-logo {
+	margin: 100px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.sponsors .sponsors-logo div {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.sponsors .sponsors-logo div:first-child {
+	justify-content: left;
+}
+.sponsors .sponsors-logo div:last-child {
+	justify-content: right;
+}
+.sponsors .sponsors-logo div img {
+	width: 200px;
+	opacity: .5;
+	transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+}
+.sponsors .sponsors-logo div img:hover {
+	opacity: 1;
+}
+
+.sponsors p {
+	color: var(--gray);
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: .05rem;
+	line-height: 2rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+}
+.sponsors #learn-more {
+	margin-top: 10px;
+	font-size: .9rem;
+	letter-spacing: .15rem;
+	font-weight: 300;
+}
+.sponsors #learn-more a {
+	color: var(--white);
+	text-underline-offset: 3px;
+}
+.sponsors #learn-more a:hover {
+	text-decoration: none;
 }
