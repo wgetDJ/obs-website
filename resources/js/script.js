@@ -1,3 +1,4 @@
+// Download Button
 const linuxBtn = document.querySelector('.linuxDownload');
 const macosBtn = document.querySelector('.macosDownload');
 const windowsBtn = document.querySelector('.windowsDownload');
@@ -49,3 +50,24 @@ switch (getOS()) {
 	default:
 		generalBtn.style.display = 'block';
 }
+
+
+// Feature tabs
+const tabs = document.querySelectorAll('[data-tab-value]')
+const tabInfos = document.querySelectorAll('[data-tab-info]')
+
+tabs.forEach(tab => {
+	tab.addEventListener('click', () => {
+		const target = document.querySelector(tab.dataset.tabValue);
+
+		tabs.forEach(eachTab => {
+			eachTab.classList.remove('active');
+		});
+		tab.classList.add('active');
+
+		tabInfos.forEach(tabInfo => {
+			tabInfo.classList.remove('active-block');
+		});
+		target.classList.add('active-block');
+	});
+});
